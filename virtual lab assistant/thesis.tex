@@ -1,0 +1,419 @@
+\documentclass{SSBT-BE}
+\usepackage{makeidx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{subfigure}
+\usepackage{ragged2e}
+\usepackage{%
+  babel,
+  algorithmic,
+  algorithm,
+  caption
+}
+
+\usepackage{url}
+\usepackage[breaklinks=true]{hyperref}
+
+\usepackage[intoc]{nomencl}
+\renewcommand{\nomname}{Abbreviations}
+\makenomenclature
+\makeindex
+\begin{document}
+\title {VIRTUAL LAB ASSISTANT }
+\author{\\ Pradnya Vijay Nikam 
+        \\ Chhayashree Pralhad Patil
+       \\ Gauri Vijay Sonar
+       \\Saniya Javed Shaikh
+       }
+\dept{Department of Computer Engineering 2024-25}
+\supervisor{Dr.Akash.D.Waghmare }
+
+\degree{Bachelor of Engineering}
+\specialization{Computer Engineering}
+\type{Minor Project}
+%\type{Seminar}
+\hod{Dr. Manoj E. Patil}
+\submitdate {2025-26}
+\beforepreface 
+
+\afterpreface
+\listoffigures
+\newpage
+\listoftables
+\newpage
+%\input{glossary}
+\clearpage
+\pagenumbering{arabic}
+\pagestyle{plain}
+
+\prefacesection{Acknowledgements}
+%\input{acknowledgement}
+No work could have been accomplished without the cooperation, guidance, and support of many individuals. The team members express their heartfelt gratitude to everyone who contributed to the successful completion of this project. Many thanks are extended to the almighty God for providing the strength and determination to undertake this endeavor.
+We are deeply grateful to Principal Prof. Dr. Girish K. Patnaik for providing the necessary resources and a supportive environment for our academic pursuits. Our sincere gratitude also goes to Dr. Akash D. Waghmare, Associate Professor, for his insightful suggestions and continuous encouragement, which were instrumental in completing this project.
+Special appreciation is reserved for Mr. Ashish T. Bhole, Associate Professor, who served as the TE Project Incharge. His role exemplified exceptional dedication, as he provided expert guidance, constructive feedback, and continuous motivation throughout the project duration. His support and mentorship were pivotal in helping us achieve our objectives and enhance the overall quality of our work.
+Acknowledgments are also extended to the faculty members and lab assistants who provided technical support, as well as our peers for their collaboration and encouragement. Lastly, we express our deepest gratitude to our parents and friends for their unwavering support and understanding, which enabled us to persevere and successfully complete this project.
+
+
+
+
+
+\acknowledgeauthor
+
+% Use following command at the command prompt to display the Abbreviations
+ %makeindex thesis.nlo -s nomencl.ist -o thesis.nls
+  \makeindex
+ 
+\prefacesection{Abstract}
+
+The Virtual Lab Assistant is a web-based system designed to conduct and manage practical examinations in a digital environment. 
+The system provides features such as student authentication, practical selection, real-time query evaluation, and performance tracking. 
+Each student logs in using a unique credential, ensuring secure and controlled access to the system. 
+
+The platform allows students to perform practical tasks by writing SQL queries, which are validated instantly. 
+It also includes timer-based exams, session control to prevent multiple logins, and automatic submission features to maintain exam integrity. 
+The use of Firebase ensures efficient data storage, authentication, and real-time updates. 
+
+This system reduces manual effort, improves accuracy, and provides a structured and user-friendly interface for conducting laboratory exams. 
+Overall, it enhances efficiency, transparency, and digital transformation in academic practical assessments.
+
+
+
+            
+\chapter{Introduction}\index{Introduction}
+\input{chapters/chapter1}
+
+
+\chapter{Project Planning and Management}\index{Project Planning and Management}
+\input{chapters/chapter2}
+
+\chapter{Analysis}\index{Analysis}
+\input{chapters/chapter3}
+
+\chapter{Design}\index{Design}
+\input{chapters/chapter4}
+
+\chapter{Coding / Implementation}
+
+Coding and implementation provide the practical realization of the system by transforming the design into an executable application.
+
+The implementation of the Virtual Lab Assistant is carried out using modern web technologies such as HTML, CSS, and JavaScript for the frontend, and Firebase for backend services including authentication, database management, and hosting. The system is developed in a modular manner to ensure scalability, maintainability, and ease of updates.
+
+
+The organization of this chapter is as follows. Section 5.1 describes the algorithms
+and step-by-step procedures used in the system. the software
+and hardware requirements needed for development are explained in Section 5.2. Section 5.3 presents the various
+modules of the project along with their implementation details, a summary of the chapter provided in Section 5.4.
+
+
+\section{Algorithm / Steps}
+The following steps describe the working process of the Virtual Lab Assistant system. 
+It explains how the system handles user authentication, exam flow, query evaluation, and result storage.
+
+\begin{enumerate}
+
+\item Display login/registration page.
+\item User enters PRN and password.
+\item Authenticate user using Firebase Authentication.
+\item Check session control from database.
+\item If system is free, allow login; otherwise restrict access.
+\item Display list of practicals.
+\item User selects a practical.
+\item Display questions related to selected practical.
+\item User writes SQL queries.
+\item System validates queries and provides feedback.
+\item Store results in Firestore database.
+\item Update performance progress.
+\item End session on logout or submission.
+\end{enumerate}
+
+
+\section{Software and Hardware Requirements}
+This section describes the necessary software and hardware components required to run the Virtual Lab Assistant system efficiently.
+\subsection{Software Requirements}
+The following software technologies are used for development and execution of the system.
+\begin{itemize}
+\item Operating System: Windows/Linux
+\item Frontend: HTML, CSS, JavaScript
+\item Backend: Firebase (Authentication and Firestore)
+\item Browser: Google Chrome / Edge
+\item Database: Cloud Firestore
+\end{itemize}
+
+\subsection{Hardware Requirements}
+The system requires basic hardware configuration to ensure smooth performance during execution.
+\begin{itemize}
+\item Processor: Intel i3 or above
+\item RAM: Minimum 4 GB
+\item Storage: 500 MB free space
+\item Internet Connection: Required for Firebase services
+\end{itemize}
+
+\section{Modules in Project}
+The project is divided into multiple modules, each responsible for handling specific functionalities of the system.
+\subsection{Student Authentication Module}
+Handles student registration and login using Firebase Authentication.
+
+
+\subsection{Exam Module}
+Displays practical list and manages question flow.
+
+\subsection{Evaluation Module}
+Validates SQL queries and provides instant feedback.
+
+\subsection{Performance Tracking Module}
+Tracks completed practicals and shows progress using a progress bar.
+
+\subsection{Security Module}
+Implements restrictions like disabling copy-paste, tab switching, and auto-submit.
+
+\chapter{Testing}
+
+
+
+
+In the Virtual Lab Assistant project, testing is performed at different levels to ensure that each module works properly both individually and when integrated with other modules. Various testing techniques such as Black Box Testing and White Box Testing are applied to validate system functionality and internal logic. Both manual and automated testing approaches are considered to ensure accuracy and efficiency.
+
+
+
+The organization of this chapter is as follows. Section 6.1 describes Black Box and
+White Box testing techniques. Manual and Automated testing
+approaches are explained in Section 6.2. Section 6.3 presents test case identification and execution,  a summary of the chapter is described in Section 6.4
+
+\section{Black Box Testing}
+Black box testing is used to verify system functionality without knowing the internal code structure.
+It focuses on validating outputs based on different input conditions.
+
+\begin{itemize}
+    \item Testing of system without knowledge of internal code structure.
+    \item Focuses only on inputs and expected outputs.
+    \item Used to validate functional requirements.
+    \item Example: Checking login with valid and invalid credentials.
+\end{itemize}
+
+\section{White Box Testing}
+White box testing is performed to analyze the internal working of the system and code logic.
+It helps in verifying program flow, conditions, and execution paths.
+\begin{itemize}
+    \item Testing based on internal code logic and structure.
+    \item Involves checking conditions, loops, and execution paths.
+    \item Requires programming knowledge.
+    \item Helps in improving code efficiency and coverage.
+\end{itemize}
+
+\section{Manual Testing}
+Manual testing is carried out by testers without using any automation tools.
+It is mainly used to check user interface and overall user experience.
+\begin{itemize}
+    \item Testing performed manually without automation tools.
+    \item Tester executes test cases step by step.
+    \item Useful for UI and user experience validation.
+    \item Time-consuming but effective for small applications.
+\end{itemize}
+
+\section{Automated Testing}
+Automated testing uses tools and scripts to perform testing tasks efficiently.
+It improves speed, accuracy, and consistency in testing processes.
+\begin{itemize}
+    \item Testing performed using tools and scripts.
+    \item Faster and more reliable than manual testing.
+    \item Reduces human errors in repetitive tasks.
+    \item Suitable for large-scale and continuous testing.
+\end{itemize}
+
+\section{Test Case Identification and Execution}
+This process involves designing and executing test cases to ensure system correctness.
+It helps in identifying errors by comparing expected and actual results.
+\begin{itemize}
+    \item Identify all functional modules of the system.
+    \item Design test cases for valid and invalid inputs.
+    \item Execute test cases and record outputs.
+    \item Compare expected and actual results.
+\end{itemize}
+\subsection{Test Case Table}
+
+\renewcommand{\arraystretch}{1.3}
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+Test ID & Input & Output & Expected Output & Actual Output & Result \\
+\hline
+TC01 & Valid Login & Success & Login Success & Login Success & Pass \\
+\hline
+TC02 & Wrong Password & Error & Error Message & Error Message & Pass \\
+\hline
+TC03 & Empty Fields & Warning & Warning Message & Warning Message & Pass \\
+\hline
+TC04 & Invalid PRN & Error & Invalid User & Invalid User & Pass \\
+\hline
+TC05 & Correct Query & Success & Query Executed & Query Executed & Pass \\
+\hline
+TC06 & Wrong Query & Error & Query Error & Query Error & Pass \\
+
+
+\hline
+TC08 & Timer Expired & Auto Submit & Exam Submitted & Exam Submitted & Pass \\
+\hline
+TC09 & Logout Action & Success & Logged Out & Logged Out & Pass \\
+
+\hline
+TC10 & Contact Form Submit & Success & Data Saved & Data Saved & Pass \\
+\hline
+\end{tabular}
+\caption{Test Case Identification and Execution}
+\end{table}
+
+\chapter{Results and Discussion}
+
+The obtained results indicate that the system operates efficiently and satisfies the expected project requirements. 
+\subsection*{Results}
+
+The Virtual Lab Assistant system was successfully developed and executed in a real-time environment. During testing, students were able to log in securely using PRN and password through Firebase Authentication and access the practical examination portal without difficulty. The system properly handled invalid login attempts and maintained secure session management.
+
+During the practical examination process, students selected practicals and answered SQL-based questions using the integrated query editor. The compiler validated the syntax of queries and provided immediate feedback regarding correct or incorrect execution. The system successfully handled common SQL commands such as \texttt{SELECT}, \texttt{INSERT}, \texttt{UPDATE}, \texttt{DELETE}, and \texttt{ORDER BY}. 
+
+The timer functionality worked accurately throughout the examination process and automatically submitted the practical when the examination time expired. Student performance and practical completion data were stored successfully in Firebase Firestore, and progress indicators dynamically displayed completion percentages.
+
+From the administrator’s perspective, the system successfully displayed student records, submissions, and overall performance details. The admin panel helped in monitoring examination activities and managing the system efficiently.
+
+\subsection*{Discussion}
+
+The discussion of the results shows that the Virtual Lab Assistant system provides a reliable and user-friendly platform for conducting virtual practical examinations. The integration of Firebase Authentication and Firestore ensured smooth data handling and secure access control throughout the system.
+
+The compiler module performed effectively for basic SQL query validation and helped students receive quick feedback during examinations. However, it was observed that some complex SQL queries were partially accepted due to limited logical query checking. This indicates that future improvements can be made by implementing advanced query evaluation techniques.
+
+The automated timer and submission mechanism improved examination fairness and reduced manual supervision requirements. Additionally, the dynamic progress tracking system helped students monitor their practical completion status efficiently.
+
+Overall, the system achieved the intended objectives and demonstrated the successful implementation of an automated virtual laboratory environment. The project proved to be efficient, organized, and suitable for conducting online practical examinations with real-time interaction and evaluation.
+
+% ----------------------------------------------------
+
+\chapter{Conclusion and Future Work}
+
+The Virtual Lab Assistant system was successfully designed and implemented to provide a digital platform for conducting practical examinations and learning activities.
+
+\section*{Conclusion}
+
+The developed Virtual Lab Assistant successfully fulfills the objectives defined during the planning and analysis phases of the project. The system provides an effective solution for managing practical-based examinations in a digital environment. Features such as student authentication, practical execution, query compilation, AI-based hints, and performance tracking contribute to an improved learning experience.
+
+The integration of Firebase ensures secure database management and smooth communication between different modules of the system. The project demonstrates that modern web technologies can be effectively used to create scalable, reliable, and user-friendly educational applications. Overall, the project offers a cost-effective and efficient solution for virtual practical laboratory management.
+
+\section*{Future Work}
+
+Although the current system performs efficiently, there is still scope for further enhancement and improvement. In the future, more advanced technologies and features can be integrated to improve system functionality and user experience. The implementation of AI-based automatic query checking and intelligent evaluation mechanisms can make the system more accurate and interactive.
+
+The system can also be expanded to support multiple departments, subjects, and practical domains. Improvements in the user interface and graphical design can provide a better user experience. Additionally, the development of a dedicated mobile application can increase accessibility and allow students to use the platform more conveniently from different devices and locations.
+
+% ----------------------------------------------------
+
+
+
+
+\begin{thebibliography}{9}
+
+\bibitem{ref1}
+Soraya, G. V. (2022).
+``Benefits and Challenges in the Implementation of Virtual Laboratories.''
+\textit{Biochemistry and Molecular Biology Education}.
+
+\bibitem{ref2}
+Elmesery, M. (2025).
+``Advantages and Disadvantages of Virtual Laboratory in Education.''
+\textit{PraxiLabs}.
+
+\bibitem{ref3}
+De Jong, T., Linn, M. C., and Zacharia, Z. C. (2013).
+``Physical and Virtual Laboratories in Science and Engineering Education.''
+\textit{Science}, 340(6130), 305--308.
+
+\bibitem{ref4}
+Potkonjak, V., Gardner, M., Callaghan, V., Mattila, P., Guetl, C., Petrovi\'c, V. M., and Jovanovi\'c, K. (2016).
+``Virtual Laboratories for Education in Science, Technology, and Engineering: A Review.''
+\textit{Computers \& Education}, 95, 309--327.
+
+\bibitem{ref5}
+Heradio, R., de la Torre, L., Galan, D., Cabrerizo, F. J., Herrera-Viedma, E., and Dormido, S. (2016).
+``Virtual and Remote Labs in Education: A Bibliometric Analysis.''
+\textit{Computers \& Education}, 98, 14--38.
+
+\end{thebibliography}
+
+% ----------------------------------------------------
+
+
+% --------------------------------------------------
+\clearpage
+\addcontentsline{toc}{chapter}{\indexname}
+\printindex
+
+
+\clearpage
+\chapter*{Appendix}
+\addcontentsline{toc}{chapter}{Appendix}
+
+\appendix
+
+% RESET ALIGNMENT (force normal layout)
+\setlength{\leftskip}{0pt}
+\setlength{\rightskip}{0pt}
+\setlength{\parindent}{15pt}
+\noindent
+In this project, the appendix contains screenshots of the Virtual Lab Assistant system, including interfaces like the Home Page, Student Login Page, Admin Panel, and Contact Page. These visuals help in understanding the actual implementation and user interface of the system.
+ \section*{Screenshots}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=250]{chapters/home.png}
+    \caption{Home Page}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=250]{chapters/login.png}
+    \caption{Student Login}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=300]{chapters/exampractical.png}
+    \caption{Exam Practicals}
+\end{figure}
+
+ \begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=300]{chapters/examstart.png}
+    \caption{Exam Start}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=300]{chapters/adminlogin.png}
+    \caption{Admin Login}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=300]{chapters/admindash.png}
+    \caption{Admin Dashboared}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=300]{chapters/performance.png}
+    \caption{Student Performance}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=300]{chapters/contact.png}
+    \caption{Contact / Feedback Section}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=16cm,height=300]{chapters/about.png}
+    \caption{About Section}
+\end{figure}
+\end{document}

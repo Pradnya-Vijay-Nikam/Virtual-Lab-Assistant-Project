@@ -1,0 +1,165 @@
+\justifying 
+The Chapter presents a detailed examination of the Virtual Lab Assistant project.
+Analysis simplifies the project by dividing it into different parts, which is a crucial process for effective software development.
+\item The organization of this Chapter is as follows:
+Section 3.1 focuses on Requirement Collection and Identification.
+The Software Requirement Specification (SRS) is presented in Section 3.2.
+Section 3.3 summarizes the entire Chapter.
+
+
+\section{Requirement Collection and Identification}
+Requirement Collection and Identification is a critical step in the development of the Virtual Lab Assistant system. It involves gathering, analyzing, and defining the needs of users, including students and administrators.
+
+The requirements were identified through observation of existing practical examination systems and understanding the challenges faced during manual practical sessions. Key requirements include user authentication, practical execution, real-time query evaluation, performance tracking, and admin control functionalities.
+
+
+\section{Software Requirement Specification (SRS)}
+The Software Requirement Specification (SRS) for the Virtual Lab Assistant defines its functionality, user roles, and environmental needs. It ensures a clear understanding between developers, faculty, and students, minimizing ambiguity during development.
+This section outlines the functional, non-functional, and external requirements essential to the project.
+\subsection{Product Features}
+- User Management: Registration and login system for students using PRN numbers, and secure login for admin users.  
+
+\item- Subject & Practical Management:
+: Supports multiple subjects (DBMS, C, C++, Python). Each subject contains 10 practicals with 10 related questions 
+\item - Exam Controls: admin can see the progress of students and modify questions per subject  Students can only attempt practicals on their scheduled date.
+
+\item- Question Handling:: Each question includes an example, a hint, and code/SQL input support  
+
+\item- Evaluate & Submit Feature: Students can simulate “evaluate” operations and submit their solutions for evaluation
+
+\item- Timer & Attempt Control: Each exam runs under a timer (30 minutes) with automatic submission on timeout. Login attempts are limited to prevent misuse
+\item- Feedback & Help Section: Students can send feedback and contact administrators directly from the platform.
+\item- Performance Tracking: Admin can monitor completion percentages of subjects and practicals through progress indicators.
+
+\subsection{Operating Environment}
+Software and hardware environments, referred to as the operating environment for the project, are outlined as follows:
+
+
+\begin{enumerate}
+  \item	Operating Environment:
+The Virtual Lab Assistant is a web-based platform accessible from any modern browser such as Google Chrome, Firefox, or Edge.
+It can be hosted on any web server supporting HTML, CSS, and JavaScript for the frontend and future integration with PHP or Node.js for the backend.
+Secure communication (HTTPS) ensures safe data transfer.
+
+
+ 
+  \item	Hardware Environment:
+The system requires only basic hardware — desktop, laptop, or tablet with an internet connection.
+A server with at least 4 GB RAM and SSD storage is recommended for efficient performance and scalability.
+
+
+
+
+\end{enumerate}
+\newpage
+\subsection{Assumptions} 
+The following assumptions are made during the development and usage of the Virtual Lab Assistant:
+
+\begin{itemize}
+
+    \item	Users (students and administrators) will have access to stable internet connectivity.
+    \item	Students have basic computer and internet literacy.
+    \item	Admin users will maintain the correctness of practical questions 
+    \item	All users will operate the system through authorized login credentials.
+    \item	The server environment will support standard web technologies and ensure data backup.
+    \item	The system will be scalable to accommodate an increasing number of students and subjects.
+
+ 
+\end{itemize}
+
+\subsection{ Functional Requirements}
+The Virtual Lab Assistant system includes the following functional requirements:
+\subsubsection{\textbf{System}}
+\begin{enumerate}
+  
+
+   \item 	Student Registration and Login:
+Students can register with PRN and password and log in securely.
+    \item	Practical Execution:
+Students can start subject-specific practicals, compile code, get hints, and submit answers.
+   
+    \item	Question Management:
+Admin can modify or add new questions per subject and practical.
+    \item	Performance Monitoring:
+The system shows progress completion bars for each subject’s practicals.
+    \item	Feedback Submission:
+Students can send feedback or queries to the admin using a contact form.
+    \item	Session Management:
+Each login is tracked, and excessive login attempts result in account lockout.
+
+%\end{enumerate}
+%\subsubsection{\textbf{User}}
+%\begin{enumerate}
+%    \item Give overall information to the system. 
+ %    \item  View diet plan, exercise, nutritions according to BMI calculation. 
+  %  \item Set their daily routine
+%\end{enumerate}
+\newpage
+\subsection{Non Functional Requirements}
+Non-functional requirements define the quality attributes of the Virtual Lab Assistant rather than the specific behaviors.
+While functional requirements determine what the system should do, non-functional requirements specify how well it should perform under various conditions.
+\begin{enumerate}
+    \item Performance Requirement:- The system should respond within 2 seconds for major actions such as login, compile, or submit.
+
+   \item  Availability:- The web application should be accessible 24/7, ensuring minimal downtime.
+   
+  \item Usability:- The interface should be user-friendly, easy to navigate, and consistent across devices.
+
+   \item Consistency:-The interface should be user-friendly, easy to navigate, and consistent across devices.
+   
+  \item Reusability:- Question templates and student evaluation components can be reused for multiple subjects or academic years.
+
+\end{enumerate} 
+
+\section {External Interfaces}
+Some External interfaces are as follows:
+\begin{enumerate}
+    \item User Interface
+    \item Hardware Interface
+    \item Software Interface
+
+ 
+\subsection{User Interface}
+  The proposed system has several options for users to interact with. Following are the user interfaces available:
+
+    •	Web Application:
+Provides a graphical interface for both students and administrators. Students can log in, attempt practicals, and view progress.
+
+•	Admin Dashboard:
+Allows administrators to set dates, manage subjects, and update questions.
+
+   
+
+   
+
+\subsection{Hardware Interface}
+  •	Compatible with desktops, laptops, and tablets.
+
+•	Optional integration for printing student performance reports.
+
+
+\subsection{Software Interface}
+ •	The application supports integration with backend databases (Firebase).
+
+•	Can connect with cloud-based storage or external APIs for future expansion.
+.
+
+\subsection{Communication Interface}
+•	Uses HTTP/HTTPS for secure data transfer between the client and server.
+
+•	Can integrate with email or SMS APIs for notifications in future updates.
+
+
+
+\end{enumerate}
+
+
+
+
+
+
+\section{Summary}
+This Chapter provided a comprehensive analysis of the Virtual Lab Assistant project.
+It covered requirement collection, software specifications, and external interfaces.
+The study identified key functional and non-functional requirements, ensuring that the system meets academic and operational needs.
+The Virtual Lab Assistant offers an innovative, scalable, and secure way to conduct online practicals efficiently while supporting both students and faculty through a seamless digital platform.
